@@ -1,0 +1,64 @@
+Deben utilizarse protocolos de invalidación o protocolos de actualización
+Si, porque sin ella el juego de instrucciones no es completo
+No, porque no es necesaria
+No, porque test&set no es una instrucción
+Ninguna de las anteriores es correcta
+MESSI
+MESI
+Dragon
+MSI
+Que al reutilizarse el barrier se puede producir un deadlock si existen diferentes procesos con diferentes velocidades.
+Que consume mucho procesamiento si  existen diferentes procesos con diferentes velocidades.
+Que los contadores no son reutilizables ya que se puede producir un deadlock
+Ninguna de las anteriores es correcta.
+La E de exclusive para bloques no compartidos
+La E de exclusive-dirty usado para en programas monohilo reducir el consumo del bus
+La E de exclusive-clean usado para en programas monohilo reducir el consumo del bus
+Ninguna de las anteriores
+Modificado
+Exclusivo
+Inválido
+Compartido
+Modificado
+Exclusivo
+Inválido
+Compartido
+Modificado
+Exclusivo
+Inválido
+Compartido
+Como la información ya no se puede utilizar las copias se invalidan
+La información de las copias se actualiza con el nuevo valor
+Todas las respuestas son correctas
+Sincronización por barrera
+Sincronización de una vía
+Sincronización de cerrojos
+Sincronización de cerrojos basados en colas
+Load Linked
+Test&set
+Store-conditional
+Ninguna de las anteriores
+Load Linked
+Store-conditional
+Test&set
+Ninguna respuesta es correcta. 
+MESSI
+MESI
+Dragon
+MSI
+MT
+SMT
+Hypertrading
+Simultaneous HyperTrading
+1-SMT 2-superescalar 3_MT Grano Grueso
+1-Superescalar 2- MT Grano fino 3-SMT
+1-MT Grano Grueso 2- Superescalar 2-SMT 3-MT Grano fino
+1-superescalr 2-SMT 3 MT Grano fino
+En MT solo se elimina el desperdicio (Unidades funcionales) vertical, mientras que en SMT se elimina el desperdicio vertical y horizontal
+En MT solo se elimina el desperdicio horizontal, mientras que en SMT se elimina el desperdicio vertical y horizontal
+MT no explota el TLP mientras que SMT sí
+Ninguna de las anteriores es correcta
+Si un subproceso recibe una gran cantidad de fallos de caché, otro hilo puede continuar, aprovechando los recursos informáticos utilizados, que por lo tanto puede llevar a la ejecución global más rápido, ya que estos recursos habrían sido inactivo si se ejecuta sólo un subproceso
+Si varios hilos trabajan en el mismo conjunto de datos pueden compartir su caché, lo que lleva a un mejor uso de la caché o la sincronización de sus valores
+El soporte de hardware para multihilo es más visible para el software, por lo que requiere más cambios en los programas de aplicaciones y sistemas operativos
+Si un hilo no puede utilizar todos las unidades funcionales de la CPU (porque las instrucciones dependen del resultado de cada uno), la ejecución de otro subproceso puede evitar dejar estas inactivas

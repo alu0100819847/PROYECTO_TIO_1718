@@ -1,0 +1,1157 @@
+Multithread
+ILP
+TLP
+Ninguna de las anteriores
+Sí, solo en este tipo de máquinas.
+No, pero en las máquinas vectoriales sí.
+Ni en las máquinas superescalares ni en ningún otra.
+Sí y debe tenerse en cuenta en todos los tipos de máquina.
+Debe mantener la consistencia de los resultados como si se ejecutaran las instrucciones en estricto orden, aunque no debe hacerlo para el conjunto de excepciones.
+Debe mantener la consistencia tanto de resultados como de excepciones como si se ejecutaran la instrucciones en estricto orden.
+Debe mantener la consistencia de las excepciones como si se ejecutaran las instrucciones en estricto orden, aunque no debe hacerlo para los resultados.
+Ninguna de las anteriores.
+Ese término no existe
+2
+Ninguna
+5
+3
+Dependencias de datos y estructurales
+Sólo dependencia de datos
+Sólo dependencias estructurales
+Dependencias de control
+Si
+No
+Son iguales
+La detección de dependencias y el renombrado de registros
+Trastocar el orden de las instrucciones para evitar dependencias estructurales y de datos y el renombrado de registros
+Permitir ejecución de instrucciones en cuanto sus operandos estén preparados y el renombrado de registros 
+Sólo el renombrado de registros.
+Las máquinas superescalares implementan planificación estática que depende del compilador y las máquinas VLIW implementan planificación dinámica que depende del hardware\n
+Las máquinas superescalares implementan planificación dinámica que depende del harware y las máquinas VLIW implementan planificación estática que depende del compilador\n
+Todas lo son
+El hardware de un máquina VLIW y el de una superescalar es igual de complejo
+Situaciones  que se producen por el hecho de ejecutar instrucciones fuera de orden 
+Por las excepciones cuya información almacenada en los registros de excepciones está incompleta.
+No hay diferencias. Ambos tipos de máquinas implementan planificación dinámica que se resuelve en tiempo de compilación\n
+Ninguna es cierta.\n
+En cada operación se especifica el estado de todas las unidades funcionales del sistema.\n
+Por el número de datos que se cargan en cada operación\n
+No es cierto que el juego de operaciones sea grande en cuanto al tamaño de cada instrucción.\n
+Por el número de operaciones que soporta cada repertorio.
+La complejidad sofware disminuye y aumenta la complejidad hardware de planificación.\n
+Se gana en complejidad hardware y software de planificación.\r\n
+La complejidad software y la complejidad hardware disminuyen de planificación.\n
+Aumenta la complejidad software y disminuye la complejidad hardware de planificación.
+Un conjunto de instrucciones del programa original dependientes entre sí para agrupar las dependencias y así mejorar el rendimiento a la hora de ponerles solución.\n
+Un conjunto de instrucciones del programa original dependientes entre sí agrupadas en base a las dependencias y riesgos que producen.\n
+Un conjunto de instrucciones del programa original independientes entre sí para evitar burbujas innecesarias durante la ejecución aprovechando la diversificación de unidades funcionales.
+Ninguna de las anteriores es cierta.\n
+De 2 a 5 unidades funcionales\n
+De 5 a 30 unidades funcionales\n
+De 30 a 40 unidades funcionales\n
+De 40 a 70 unidades funcionales\n
+El no aprovechamiento del paralelismo de la máquina.\n
+El cantidad de dependencias entre las instrucciones del programa original planificadas en las instrucciones largas.\n
+Desperdicio de memoria al no aprovechar el paralelismo.\n
+No hay inconvenientes.\n
+Verdadero\n
+Falso\n
+Ganar tiempo para tomar la decisión de si el salto es tomado o no tomado.\n
+Configurar los saltos como tomados siempre.\n
+Configurar los saltos como no tomados siempre.\n
+Aprovechar los ciclos que un salto tarda en resolverse para ejecutar otras instrucciones.\n
+Ser independientes del resultado del salto.\n
+Ser dependientes del resultado del salto.\n
+No presentar dependencias de datos, pero sí de control.\n
+No presentar dependencias de control, pero sí de datos.\n
+Una técnica de predicción estática de saltos.\n
+Una técnica de pipelining software.\n
+Una técnica de desenrollado de bucles.
+El desenrollado de bucles desempeña un papel importante para obtener trazas más largas.\n
+Se eligen las trazas más frecuentes.\n
+Todas son ciertas.
+Dependencias entre registros\n
+Dependencias entre referencias de memoria 
+Dependencias de control\n
+Todas las dependencias pueden resolverse en tiempo de compilación.
+La operación se trata como una no-operación.\n
+Se retrasa la ejecución de la operación.\n
+Se renombran los registros usados en la operación para evitar riegos de nombre.\n
+Ninguna es cierta.\n
+Aumentar el número de instrucciones de una determinada rama de ejecución de un salto.\n
+Disminuir el número de instrucciones de una determinada rama de ejecución de un salto.\n
+No afecta al número de instrucciones, pero sí al número de dependencias de datos entre ellas.\n
+Las operaciones anuladas no consumen recursos\n
+Su aplicación queda reducida a flujos de control simples, ya que en saltos con numerosas alternativas se vuelve muy costosa.
+Las operaciones condicionales tardan menos en ejecutarse que las operaciones que no lo son.\n
+El hardware de emisión de paquetes.\n
+El hardware de emisión de instrucciones.\n
+El software de planificación (compilador). \n
+Ninguna es cierta.
+1)   MULT R3, R2, R1 ---------------                ADD R5, R3, R4 <br/>\r\n2)   -------------- ADD R6, R1, R4               --------------\r\n
+1)   ADD R6, R1, R4  ----------------                ADD R5, R3, R4 <br/>\r\n2)   --------------  MULT R3, R2, R1             --------------\r\n
+1) ------------   -------------                 STORE 4(R1), R5 <br/>\r\n2) ------------  ADD R5, R3, R4               -------------  <br/>\r\n3) ------------  --------------                 LOAD R5, 4(R1)\r\n\r\n
+1)  MULT R3, R2, R1      ADD R5, R3, R4      ADD R6, R1, R4\r\n
+Tanto las máquinas RISC como las máquinas VLIW cuentan con muchos registros de propósito general.\n
+No necesita algoritmos de reemplazamiento
+Ejecutar las instrucciones de los dos caminos posibles de un branch
+Se gana tiempo a costa de consumir recursos\r\n
+Las máquinas RISC implementan un único pipeline mientras que las máquinas VLIW implementan multi pipeline.\n
+La complejidad de la lógica de emisión de instrucciones es más sencilla en las máquinas VLIW.\n
+Todas son ciertas.
+1) LOAD R5, 4(R1)  ADD R5, R5, R2      STORE 4(R1), R5\n\n
+Aumentar el número de saltos e incrementar el nivel de ejecución especulativa de sus instrucciones.\n
+Reducir el número de saltos y el nivel de ejecución especulativa de sus saltos.\n
+Aumentar el número de saltos y reducir el nivel de ejecución especulativa de sus saltos.
+Múltiples flujos de ejecución con multiples contadores de programa y una única unidad de control.\n
+Un único flujo de ejecución con un único contador de programa y una unidad de control por cada unidad funcional.\n
+Un único flujo de ejecución con un único contador de programa y una única unidad de control.\n
+Ninguna es correcta.
+El número de unidades funcionales.\n
+El número de unidades funcionales y el tamaño de código de control de las unidades funcionales.\n
+La capacidad de las estaciones de reserva.\n
+La b y la c.
+Salto multicamino.
+Salto retardado.\n
+Adelanto de salto.\n
+Salto paralelo.
+Sí, paralelizando la ejecución de ambas instrucciones.\n
+No, las instrucciones no tienen dependencia de datos.\n
+No, en ningún caso.
+Se producen todos los riesgos
+Riesgos estructurales
+1) -------------  --------------                 LOAD R5, 4(R1) <br/>\r\n2) -------------  ADD R5, R5, R2               ------------- <br/>\r\n3) -------------  --------------                 STORE 4(R1), R5\r\n\r\n
+1) ---------------- ADD R5, R5, R2      LOAD R5, 4(R1) <br/>\r\n2) ----------------  --------------                         STORE 4(R1), R5\r\n
+Almacena el registro destino del LOAD y la dirección de memoria accedida cuando se ejecuta un advanced load.\n
+Almacena el registro destino del LOAD cuando se ejecuta un advanced load.\n
+Almacena la dirección de memoria accedida cuando se ejecuta un advanced load.\n
+Ninguna de las anteriores.
+Está implementada con memoria distribuida \n
+Está implementada con memoria especial de la arquitectura Itanium\n
+Está implementada con memoria asociativa.
+Ninguna es cierta.\n
+Cuando una operación de carga de memoria adelanta su ejecución de forma especulativa a un store.
+Cuando se ejecuta un load justo antes de un store.\n
+Cuando una operación de carga de memoria adelanta su ejecución de forma especulativa.\n
+Ninguna de las anteriores \n
+1)   MULT R3, R2, R1  --------------               ADD R6, R1, R4 <br/>\r\n2)   --------------   ADD R5, R3, R4               --------------\r\n
+WAW
+RAW
+WAR
+RAR
+WAW y WAR
+RAW, WAW y WAR
+RAR y WAW
+WAR y RAW
+En el renombrado de los registros de destino de las intrucciones pendientes.
+En el renombrado de los registros de origen de las instrucciones pendientes.
+En el renombrado de los registros de destino de todas las instrucciones incluidas las pendientes.
+En el renombrado de todos los registros de todas las instrucciones.
+Ninguna
+La información almacenada en cada estación de reserva de cada unidad funcional determina cuando una instrucción puede comenzar su ejecución en esa unidad funcional
+Los resultados son pasados directamente a las unidades funcionales sin pasar por registros a través del CDB (Common Data Bus)
+Las dos anteriores
+Que los loads en el load buffer esperan por el dato a cargar y que la unidad de memoria esté preparada, mientras que los stores en el store buffer no.
+No hay diferencias
+Que los loads en el load buffer tan sólo deben esperar a que la unidad de memoria esté lista mientras que los stores en el store buffer además tienen que esperar por el dato a almacenar. 
+Los loads en el load buffer se ejecutan inmediatamente sin esperas mientras que los stores en el store buffer deben esperar por sus operandos.
+No se permite la ejecución de ningún branch aunque sí la ejecución de cualquier otro tipo de instrucciones.
+No existe ninguna restricción, las excepciones se manejan desde registros especialmente habilitados (Handler Exception Registers, HER).
+No existe ninguna restricción, las excepciones se gestionan sobre la marcha.
+El  pipeline ha completado ya instrucciones posteriores, según el orden del programa, a la instrucción que produjo la excepción o el pipeline aún no ha completado la ejecución de alguna instrucción que, según el orden del programa, es anterior a la instrucción que produjo la excepción.
+No porque habría terminado de realizarse la instrucción de suma antes de saberse la condición
+El  pipeline no ha completado instrucciones posteriores, según el orden del programa, a la instrucción que produjo la excepción o el pipeline ya ha completado la ejecución de alguna instrucción que, según el orden del programa, es anterior a la instrucción que produjo la excepción.
+El  pipeline no ha completado ya instrucciones posteriores, según el orden del programa, a la instrucción que produjo la excepción o el pipeline aún no ha completado la ejecución de alguna instrucción que, según el orden del programa, es anterior a la instrucción que produjo la excepción.
+El  pipeline ha completado ya instrucciones posteriores, según el orden del programa, a la instrucción que produjo la excepción o el pipeline acabada de completar la ejecución de alguna instrucción que, según el orden del programa, es anterior a la instrucción que produjo la excepción.
+Individuales o agrupadas
+Individuales, agrupadas o centralizas
+Individuales, agrupadas, centralizadas o en red
+Centralizadas o en red.
+Los segmentados consiguen ejecutar más de una instrucción por ciclo y los superescalares como máximo una 
+Los superescalares consiguen ejecutar más de una instrucción por ciclo y los segmentados como máximo una
+Los segmentados ejecutan más instrucciones por ciclo que los superescalares
+Ninguna de las anteriores
+Las maquinas superescalares acceden mucho más a las instrucciones que a los datos, por lo que la separación mejora el acceso.
+Las maquinas superescalares acceden mucho más a los datos que a las instrucciones, por lo que la separación mejora el acceso.
+Al emitir varias instrucciones por ciclo necesita un gran ancho de banda de instrucciones, y una de las formas de conseguirlo es separando datos de instrucciones.
+Ninguna de las anteriores
+Riesgos de dependencias de datos y de control
+Es un mecanismo que consiste en el empleo de una serie de buffers antes de cada unidad funcional para almacenar las instrucciones en el momento de su emisión.
+Las dos tipos de estructuras más usadas en este mecanismo son los buffers exclusivos y los combinados.
+El ROB (Reorder Buffer) es un shelving buffer combinado.
+Ninguna de las anteriores
+Reordenamiento de las instrucciones, Prediccion dinámica del salto y renombrado.
+Reordenamiento de instrucciones, retraso del salto y renombrado.
+Reordenamiento de instrucciones y emision simultanea de múltiples instrucciones.
+Estaciones individuales
+Estaciones agrupadas
+Estaciones combinadas
+Estaciones centralizadas
+Porque es una dependencia clasificada como falsa que no implica riesgo para el flujo de ejecución.
+Porque la maquina detecta la dependencia y adelanta el resultado.
+Porque ha empezado a realizar el calculo de la dirección y acontinuacion esperara a que termine la 0.
+Porque al detectar que es copia de memoria a memoria hace la copia internamente.
+Ambos algoritmos dividen la decodificación de la instrucción (ID) en dos fases.
+El algoritmo de scoreboard detiene la emisión de las instrucciones con dependencias WAW Y WAR y el de Tomasulo permite su ejecución gracias al renombrado.
+En ambos algoritmos los campos Qj y Qk hacen referencia a las estaciones de reserva que producen los resultados.
+El algoritmo de scoreboard controla las dependencias de manera centralizada consultando un log de dependencias y el algoritmo de tomasulo es menos centralizado al realizar un sondeo del CDB (Common Data Bus).
+Al acceder a memoria y al emitirse.
+Al emitirse y al escribir.
+Sólo al emitirse.
+Al ejecutarse.
+La instrucción ADD.D cogerá el operando del banco de registros directamente por lo que Qj = -1.
+La instrucción ADD.D escanea el Reorder Buffer buscando la última instrucción que escribe en F0 encontrará que está en la posición 5 e igualará Qj = 5.
+Ninguno de los anteriores
+Unidad funcional ocupada.
+Reorder buffer lleno.
+Estaciones de reserva correspondientes ocupadas.
+Todas lo son.
+ILP, SIMD
+ILP, MIMD
+TLP, MIMD
+ILP, MISD\n
+El hardware de las máquinas VLIW es más complejo que el de las superescalares
+Un compilador para una máquina superescalar es más simple que uno para una máquina VLIW
+Un compilador para una máquina VLIW es más simple que uno para una máquina supescalar
+Los valores de los operandos fuente de la instrucción que se encuentra almacenada en esa estación de reserva
+Los índices de las estaciones de reserva que contienen las instrucciones que producirán los valores de los operandos fuente de nuestra instrucción
+Los índices de los registros que contienen los valores de los operandos fuentes de la instrucción
+El número de instrucciones que se han emitido antes y después que la instrucción
+Los índices del reorderbuffer que contienen las instrucciones que producirán los valores de los operandos fuente de nuestra instrucción
+Los segmentados pueden inicializar más de una instrucción por ciclo y los superescalares como máximo una
+Los superescalares pueden inicializar más de una instrucción por ciclo y los segmentados como máximo una
+Los superescalares ejecutan más instrucciones por ciclo que los segmentados
+Los superescalares ejecutan varias intrucciones por ciclo y los segmentados solo una
+RAW
+WAR
+Todas las respuestas son correctas
+WAW
+Colocando multiplexores a la entrada de la ALU
+Añadiendo a los buffers información sobre los registros utilizados en la etapa anterior.
+Con circuitería adicional y comparadores para saber si hay que adelantar
+Todas las anteriores son correctas
+SW   $1 4($2)\nADD  $1 $2 $3\n
+LW $1 5($2)\nADD $1 $2  $3
+LW $1, 5($7)\r\nADD $7, $1, $2
+SW $1 4($2)\nLW  $2 4($2)
+RAW
+WAR, WAW
+WAW
+Riesgos de control
+Riesgos estructurales y de control
+Todas las instrucciones tardan lo mismo en ejecutarse
+Se amplia el número de unidades funcionales
+El ciclo EX se podrá repetir tantas veces como sea necesario para completar la operación
+Se utilizan registros diferentes para operandos flotantes que para enteros
+Multiplicación Flotante
+División entera
+Suma Flotante
+División Flotante
+a
+b
+c
+d
+a
+b
+c
+d
+a
+b
+c
+WAR
+RAW
+No hay dependencia porque los accesos se realizan por orden, primero se escribe y luego se lee
+WAW
+6
+7
+8
+9
+Predecir no efectivo
+Predecir efectivo
+No es necesario utilizar un predictor ya que no se producen riesgos de control
+Los predictores de 1 y 2 bits utilizan únicamente información local
+Los predictores de torneo utilizan información local y global
+Los predictores correlacionados tienen en cuenta un único branch para hacer la predicción
+Los predictores de torneo utilizan multiples predictores, unos basados en información global y otros en información local
+El de la suma
+El del load
+El de la resta
+WAR
+RAR
+RAW
+Ninguna
+Una planificación dinámica
+Una planificación estática
+Ambas
+Dependiendo del código
+Completamente asociativa
+Asociativa por conjuntos
+Paginada
+Mapeado directo
+Menor complejidad hardware que el mapeado directo
+Mayor rapidez en la identificación que en el mapeado directo
+Todas las anteriores
+Mayor tasa de fallos que la organización completamente asociativa
+Complejidad de los circuitos
+Es más cara
+Tasa de fallos elevada
+Sobrecarga del hardware porque las etiquetas son de gran tamaño
+Alta complejidad hardware
+Baja velocidad de operación
+Es más flexible
+Bloque
+Segmento
+Página
+Marco de bloque
+Bloque
+Segmento
+Página
+Marco de bloque
+Evento que ocurre cuando no se encuentran los datos deseados en memoria caché, debiendo acceder a la memoria secundaria para traerlos a la memoria principal
+Tablas de páginas
+Tabla de segmentos
+Evento que ocurre cuando no se encuentran los datos deseados en memoria caché, debiendo acceder a la memoria principal para traerlos a la memoria caché
+Evento que ocurre cuando no se encuentran los datos deseados en memoria principal, debiendo acceder a la memoria secundaria para traerlos a la memoria caché
+Ninguna de las anteriores
+Caché asociativa
+Caché inclusiva
+Caché retroactiva
+Ninguna de las anteriores
+Caché inclusiva
+Caché exclusiva
+Caché asociativa
+Ninguna de las anteriores
+para un tamaño dado de memoria caché siempre tienen mayor tasa de aciertos que las cachés unificadas
+tienen peores tiempos de acceso efectivo que las cachés unificadas
+eliminan la competición por la caché entre el procesador de instrucciones y la unidad de ejecución
+Todas son correctas
+para un tamaño dado de memoria caché siempre tienen mayor tasa de aciertos que las cachés partidas
+tiene mejores tiempos de acceso efectivo que las cachés partidas
+doblan el ancho de banda entre la jerarquía de memoria y la CPU
+Todas son falsas
+Cachés unificadas, disminución los tiempos de acceso y de acierto
+Cachés asociativas, disminución de tasa de fallos y tiempos de acceso y de acierto
+Ninguna es cierta
+Ambas aumentan el ciclo de reloj y la penalización al transferir
+No penalizan, pero sí que aumentan el ciclo de reloj
+Únicamente penalizan la transferencia
+Aumentar el tamaño de los bloques conlleva a un aumento de la penalización en la transferencia mientras que aumentar el grado de asociatividad produce un aumento del ciclo de reloj
+Aumentar el tamaño de los bloques produce un aumento del ciclo de reloj mientras que aumentar el grado de asociatividad conlleva a un aumento de la penalización en la transferencia
+Caché víctima
+Caché Pseudo-Asociativa
+Pre-búsqueda hardware
+Todas las anteriores son técnicas para reducir la tasa de fallos
+funcionan con ejecución fuera de orden
+continúan proporcionando datos si se produce un fallo de escritura de datos
+procesan los fallos en paralelo
+Todas son correctas
+el algoritmo de reemplazo se aplica exclusivamente entre las páginas del proceso
+la memoria se fragmenta más que realizando una asignación local
+las referencias generadas por todos los programas se consideran como una secuencia de referencias única
+las referencias generadas por todos los programas no se consideran como una secuencia de referencias única
+el algoritmo de reemplazo se aplica exclusivamente entre las páginas del proceso
+la memoria se fragmenta menos que realizando una asignación global
+las referencias generadas por todos los programas se consideran como una secuencia de referencias única
+Todas son correctas
+Cuando se produce un fallo de página se traen páginas no pedidas
+Es efectiva aunque la mayoría de páginas que se traen no se referencien
+Normalmente es más eficiente que la paginación por demanda a la hora de ejecutar un proceso por primera vez
+Todas son falsas
+el proceso se ejecuta por primera vez
+se pide constantemente páginas que no han sido referenciadas con anterioridad
+la mayoría de las futuras referencias estén en páginas que hayan sido referenciadas con anterioridad
+se conjunta con el uso del Write Through
+Write Back y Write Through
+LRU, LFU, FIFO, MRU
+Primer ajuste, Mejor ajuste, Peor ajuste
+Ninguna de las anteriores es correcta
+Primer ajuste
+Mejor ajuste
+Peor ajuste
+Todas se comportan igual de bien
+Se usa una lista circular con un bit extra para decidir cual es la que se reemplaza
+Un puntero de pila es un registro de propósito específico
+Se controla el número de fallos de las páginas de cada proceso, aumentando las páginas asignadas a un proceso si hay muchos fallos o disminuyéndolas si hay pocos
+Seleccionar la página más recientemente referenciada
+Reemplazando las páginas que se utilizan con menos frecuencia
+Se usa una lista circular con un bit extra para decidir cual es la que se reemplaza
+Se controla el número de fallos de las páginas de cada proceso, aumentando las páginas asignadas a un proceso si hay muchos fallos o disminuyendolas si hay pocos
+Seleccionar la página más recientemente referenciada
+Reemplazando las páginas que se utilizan con menos frecuencia
+Se usa una lista circular con un bit extra para decidir cual es la que se reemplaza
+RAW
+Se controla el número de fallos de las páginas de cada proceso, aumentando las páginas asignadas a un proceso si hay muchos fallos o disminuyendolas si hay pocos
+Seleccionar la página más recientemente referenciada
+Reemplazando las páginas que se utilizan con menos frecuencia
+LRU
+FIFO
+MRU
+Working set
+En ciclos de ejecución de programa y ciclos de parada
+En ciclos de parada y ciclos de lectura-escritura
+En ciclos de ejecución y latencia
+En ciclos de escritura y ciclos de lectura
+A lo que se tarda en escribir
+A lo que se trarda en leer
+A los fallos de caché
+A la latencia
+De la latencia y el tiempo de acceso a memoria principal
+Del tiempo de acceso a memoria principal y el tamaño de los bloques
+Del tiempo de parada y el tiempo de acceso a caché
+Del tamaño de los bloques y el tiempo de lectura/escritura
+Write Through y Write Allocate
+Write Through y Write Back
+Write Back y No Write Allocate
+Write Allocate y No Write Allocate
+Write Through y Write Allocate
+Write Through y Write Back
+Write Back y No Write Allocate
+Write Allocate y No Write Allocate
+Se actualiza el dato tanto en la memoria cache como en la memoria de nivel superior
+Sólo se actualiza el dato en caché, y se actualiza en el nivel superior cuando vaya a ser sustituido
+Se trae el bloque de la memoria de nivel superior a la caché.
+El bloque se modifica directamente en la memoria de nivel superior sin modificarlo en la cache
+Se actualiza el dato tanto en la memoria cache como en la memoria de nivel superior
+Sólo se actualiza el dato en caché, y se actualiza en el nivel superior cuando vaya a ser sustituido
+Se trae el bloque del nivel superior a la cache
+El bloque se modifica directamente en la memoria de nivel superior sin modificarlo en la cache
+Se actualiza el dato tanto en la memoria cache como en la memoria de nivel superior
+Sólo se actualiza el dato en caché, y se actualiza en el nivel superior cuando vaya a ser sustituido
+Se trae el bloque del nivel superior a la cache
+El bloque se modifica directamente en la memoria de nivel superior sin modificarlo en la cache
+Se actualiza el dato tanto en la memoria cache como en la memoria de nivel superior
+Sólo se actualiza el dato en caché, y se actualiza en el nivel superior cuando vaya a ser sustituido
+Se trae el bloque del nivel superior a la cache
+Mayor rapidez
+Mantiene la coherencia entre memoria principal y caché
+Reduce el tráfico entre memoria principal y caché
+Menor latencia
+Write Through
+Write Allocate
+Write Back
+No Write Allocate
+El swapping condiciona la planinficación de procesos
+Es un mecanismo para mover programas entre memoria principal y secundaria
+Proporciona flexibilidad en la gestión de memoria, permitiendo una utilización más frecuente del espacio
+Se requiere espacio adicional de intercambio en el disco
+La primera y la tercera son correctas
+Todas son correctas
+La post escritura (Write Back) suele utilizar la asignación de bloques (Write Allocate)
+La escritura directa (Write Through) suele utilizar la política de no asignación de bloques (Write No Allocate)
+La escritura directa usa la asignación de bloques
+La post escritura suele utilizar la política de no asignación de bloques
+Las dos primeras son ciertas
+La 3 y la 4 son ciertas
+Los registros de propósito general pueden almacenar direcciones
+Los registros de memoria son usados para guardar exclusivamente direcciones de memoria
+Los registros de propósito general son fundamentales en la arquitectura Hardvard
+Los registros constantes tienen valores creados por hardware de sólo lectura
+Victim Buffer
+LRU
+TLB
+FIFO
+CAM
+RAM
+VRAM
+Todas tienen un tiempo de busqueda igual
+Espacial y temporal
+Software y hardware
+Paginada y segmentada
+Exclusiva e inclusiva
+Anchura de bus
+La memoria caché
+Ancho de memoria
+Entrelazado de memoria
+Tabla de traducciones
+TLB
+Emparejamiento
+Victim buffer
+Swapping
+La MMU
+La memoria principal
+La memoria caché
+El sistema operativo
+De presencia
+De modificado
+De dato o instrucción
+De accedido
+Tabla de páginas invertida
+TLB
+Tabla de páginas a 2 niveles
+Ninguna es cierta
+Permite a los programas utilizar más memoria de la que realmente posee la máquina
+Permite al usuario manipular la memoria física a su antojo
+Es implementada exclusivamente por hardware
+Todas son correctas
+Tabla de páginas invertida
+Excesivo intercambio de fragmentos de programa entre la memoria principal y memoria virtual
+TLB
+El procesador consume más tiempo intercambiando segmentos que ejecutando instrucciones
+Tabla de páginas a 2 niveles
+Cualquier proceso que no cuente con marcos suficientes provocará fallos de página muy frecuentemente. A esta altísima actividad de paginación se le llama hiperpaginación
+Todas son correctas
+Ninguna es cierta
+Tabla de página a 2 niveles
+Paginada
+Tabla de páginas invertidas
+Paginada-Segmentada
+Segmentada
+Traducción de buffer adelantada (TLB)
+Semi-Segmentada
+Todas son correctas
+El espacio de memoria se divide en secciones de igual tamaño
+Se lleva a cabo una agrupación lógica de la información en bloques de tamaño variable
+Mecanismo para transferir información entre la memoria principal y la secundaria
+Ninguna es cierta
+Paginación
+Segmentación
+Swapping
+El espacio de direcciones lógico de un proceso puede ser no contiguo
+Caché
+Se divide la memoria física en bloques de tamaño fijo llamados marcos de página (frames)
+No se produce fragmentación interna
+Se establece una tabla de páginas para trasladar las direcciones lógicas a físicas
+Fragmentación externa
+El programador puede conocer las unidades lógicas de su programa, dándoles un tratamiento particular
+Es posible comenzar a ejecutar un programa, cargando solo una parte del mismo en memoria, y el resto se cargara bajo la solicitud
+Mayor coste de gestión
+Las estrategias de almacenamiento se vuelven más complicadas
+Debido a que es posible separar los módulos se hace más fácil la modificación de los mismos. Los cambios dentro de un modulo no afecta al resto de los módulos
+Ninguna es cierta
+Es posible que los segmentos crezcan dinámicamente según las necesidades del programa en ejecución
+El espacio de memoria se divide en secciones de igual tamaño
+Se lleva a cabo una agrupación lógica de la información en bloques de tamaño variable
+Mecanismo para llevar a cabo información entre la memoria principal y la secundaria
+Modularidad de programas
+Ninguna es cierta
+Protección
+Compartición
+Estructuras de datos de longitud fija
+Estructurales y de control.
+De control y de datos.
+Por dependencia de datos.
+De burbuja.
+Riesgos de control y de datos.
+Riesgos de control.
+Riesgos estructurales.
+Todas las anteriores.
+Riesgos de datos.
+No ocurre nada si se lee en la primera mitad del ciclo y se escribe en la segunda.
+Riesgo de control.
+Todas las anteriores son falsas.
+Método de la burbuja y anticipación.
+Anticipación.
+Burbuja.
+Salto retardado.
+Una.
+Dos.
+Ninguna.
+Se soluciona sólo con el método de anticipación.
+Suponer que el salto no será tomado y continuar con el flujo de instrucciones.
+Predecir el salto como efectivo.
+Salto retardado.
+Todas las anteriores son ciertas.
+Los riesgos de control pueden provocar mayor pérdida de rendimiento para la segmentación de DLX que los riesgos por dependencia de datos.
+Para la segmentación de instrucciones sobre enteros de DLX, todos los riesgos de dependencias de datos se pueden comprobar durante la fase ID.
+El caso RAR no es un riesgo.
+Todas las anteriores son ciertas.
+El repertorio de instrucciones de MIPS no fue diseñado para ser segmentado.
+Conseguir lo antes posible el dato que falta a través de recursos internos se llama anticipación o corto circuito.
+En general, la frecuencia de los saltos condicionales es superior a la de los saltos incondicionales.
+En una máquina segmentada, una instrucción es ejecutada parte por parte y tarda varios ciclos de reloj en completarse.
+Máquina vectorial memoria-memoria.
+Máquina vectorial registro-registro.
+Ni la respuesta a ni la b son ciertas.
+La respuesta a y b son ciertas.
+Verdad. Sí, siempre.
+Verdad. Excepto las de carga y almacenamiento.
+Falso. Sólo en las máquinas vectoriales memoria-memoria.
+Verdad. Excepto en las de almacenamiento.
+Las unidades funcionales.
+El compilador.
+El algoritmo de Tomasulo.
+Ninguna de las anteriores.
+Igual al número de etapas de la unidad funcional.
+Igual al número de etapas de la unidad funcional, ya que éste es el tiempo para obtener el primer resultado.
+Igual al número de etapas de la unidad funcional, pero en las operaciones memoria-memoria.
+Todas son incorrectas.
+Mayores que para las unidades funcionales.
+Menores que para las unidades funcionales.
+Igual que en las unidades funcionales.
+Nulas, es decir no existen penalizaciones.
+Porque las operaciones vectoriales trabajan sobre 64 elementos.
+Porque las instrucciones de sobrecarga adicional, que constituyen aproximadamente la mitad del bucle en DLX no están presentes en el código de DLXV.
+Ninguna es cierta.
+La respuesta a y la b son ciertas.
+Define los parámetros eléctricos de los dispositivos que deben ser soportados por los mismos para ser compatibles con el estándar, así como las señales que se emiten/reciben.
+Se encarga de englobar el contexto de todo el proceso de comunicación entre dispositivos
+Es en esta capa donde se determina cual es el ancho de bus necesario para la interconexión o la velocidad del envío entre dispositivos. 
+Ninguna respuesta es correcta.
+Todas las respuestas son correctas
+En esta capa se inicializan y configuran cada una de las secuencias de envío.
+Se mantiene un control de la redundancia cíclica de datos.
+Se procesan las secuencias de desconexión y se establecen los procesos de generación de trama de datos y de control de flujo.
+Es en esta capa donde se determina cual es el ancho de bus necesario para la interconexión o la velocidad del envío entre dispositivos.
+Todas las respuestas anteriores son correctas.
+Acceso con bus compartido
+Sistema de interconexión punto a punto
+Acceso mediante red en anillo
+Ninguna respuesta es correcta
+La a y la b son correctas
+Planificación con operaciones multiciclo.
+En esta capa se inicializan y configuran cada una de las secuencias de envío.
+Define los parámetros eléctricos de los dispositivos que deben ser soportados por los mismos para ser compatibles con el estándar, así como las señales que se emiten/reciben.
+Es en esta capa donde se determina cual es el ancho de bus necesario para la interconexión o la velocidad del envío entre dispositivos. 
+En los siguientes tres niveles: físico, enlace y red
+Se encarga de englobar el contexto de todo el proceso de comunicación entre dispositivos 
+En los mismos niveles que el modelo OSI
+Ninguna de las respuestas anteriores es correcta.
+En los siguientes dos niveles: Puente Norte y Puente Sur
+En los siguientes cuatro niveles: físico, enlace, red y transporte
+Ninguna es cierta
+ Capa de sesión, capa de transacción, capa de datos y capa física.
+Capa de aplicación, capa de presentación, capa de sesión, capa de transporte, capa de enlace y capa física.
+ Capa de sesión, capa de transacción, capa de protocolo, capa de datos y capa física.
+ Capa de aplicación, capa de presentación, capa de sesión, capa de transporte, capa de red, capa de enlace y capa física.
+Ninguna respuesta es correcta.
+Está encargado de la gestión de dispositivos de E/S conectados a él mismo
+Está encargado de la gestión del bus hacia la memoria principal
+Está encargado de la gestión de la memoria principal y de los dispositivos de E/S cuando ambos actúan de forma simultánea
+Esta controlado por las empresas mas importantes del sector de los microrpocesadores: AMD e Intel
+Ninguna respuesta es correcta
+ Es una apuesta de estandar abierto regulado por un consorcio auspiciado principalmente por Intel
+Surge como respuesta a QuickPathInterconnects(Qpi), la apuesta de la competencia.
+Todas las respuestas son correctas
+Todas son falsas
+FLASH, RAM, CAM, SAM.
+Tienen una cabecera con la ruta de encaminamiento como ocurre con los paquetes del modelo OSI
+Está encargado de la gestión de dispositivos de E/S conectados a él mismo
+ Tienen un tamaño variable, definido en el paquete de control
+contienen un campo que indica un comando que representa una operación
+Está encargado de la gestión del bus hacia la memoria principal
+Todas son correctas
+Está encargado de la gestión de la memoria principal y de los dispositivos de E/S cuando ambos actúan de forma simultánea
+Ninguna respuesta es correcta
+Todas las respuestas son correctas
+Los enlaces HT permiten interconectar sólo dispositivos HT mientras que los Túneles ofrecen la versatilidad de interconectar dispositivos de redes heterogéneas.
+Los Túneles HT se encargan de enlazar dispositivos HT que funcionan a distinta tasa de transmisión
+Los enlaces HT no permiten conectar más de dos dispositivos HT entre sí. Los Túneles HT se encargan de interconectar los dispositivos entre sí cuando las conexiones une más de dos dispositivos entre sí.
+Ninguna de las anteriores es correcta.
+redes directas como: toros, mallas, hipercubos, así como Ethernet e Infiniband
+La dificultad de configuración que requiere dicho esquema
+HTX implementa una topología propia de estandar abierto denominada HNC (HyperTransport Node Connect)
+HNC para redes de medio alcance y encapsulado de HNC sobre Ethernet para redes de largo alcance
+Los consumos excesivos  de energía que requiere
+Todas las respuestas son correctas.
+El caro hardware de implementación que se requiere
+Ninguna respuesta es cierta
+Aumentar la tasa de transferencia con los dispositivos conectados a la placa base mediante HTX-Card con el objetivo de rivalizar con PCI-Express.
+ Extender el rango de las redes HT más allá de los límites de la máquina en sí, a fin de interconectar disitintas máquinas basandose en HT u otros protocolos de Transmisión.
+Las respuestas a y b son ciertas
+HNC es sólo el estándar de conexionado de la extensión de HyperTransport HTX.
+No necesitan ningún proceso de traducción entre protocolos ya que la intercomunicación entre el procesador y los periféricos se logra mediante la misma tecnología
+Aunque la comunicación entre el procesador y los periféricos se logre usando tecnologías diferentes, no necesitan ningún proceso de traducción entre protocolos
+Arbitraje de paquetes durante la transmision/recepción.
+Necesitan procesos de traducción de protocolos sencillos de implementar para lograr la intercomunicación entre el procesador y los periféricos
+Control del ahorro energético
+Ninguna respuesta es correcta
+Gestión de las señales de control y Arbitraje de la velocidad de Transmisión
+Todas las respuestas son incorrectas
+Ninguna de las anteriores es cierta.
+El UltraSPARC T2 no usa SMT. 
+componentes internos del procesador: unidades aritmético-lógicas, cachés, registros, etc.
+unidades de proceso y memoria principal entre sí, así como con el resto de periféricos de E/S
+unidades de proceso distribuidas en un clúster de procesamiento
+Todas las anteriores son ciertas
+Proporciona una latencia extremadamente baja, gran ancho de banda y una excelente escalabilidad
+La fácil implementación hardware hace que se reduzca el número de buses en el sistema
+Aunque no posee gran escalabilidad tiene una gran flexibilidad que le aporta grandes ventajas para el interconexionado de chips
+La a y la b son incorrectas
+La a y la b son correctas
+ Los paquetes de control contienen un campo que indica un comando que representa una operación (lectura, escritura, barrera, etc.) mientras que los paquetes de datos no contienen información de encaminamiento, se limitan a seguir a su correspondiente paquete de control.
+Los paquetes de control contienen un campo que indica un comando que representa una operación (lectura, escritura, barrera, etc.) mientras que los paquetes de datos además de contener la operación correspondiente tienen el dato.
+Puede ser programado, borrado y reprogramado eléctricamente.
+Los paquetes de control  además de contener datos, contienen un campo que indica un comando que representa una operación (lectura, escritura, barrera, etc.) mientras que los paquetes de datos no contienen información de encaminamiento, se limitan a seguir a su correspondiente paquete de control
+Ninguna respuesta es correcta.
+Basado en paquetes en el cual la información (direcciones de destino, comandos y datos) se clasifica en dos  tipos: paquetes de control  y paquetes de datos.
+Fue desarrollada inicialmente por INTEL
+Basado en paquetes en el cual la información (direcciones de destino, comandos y datos) se clasifica en tres  tipos: paquetes de control, paquetes de datos y paquetes de sincronismo.
+Fue desarrollada inicialmente por Advanced Micro Devices (AMD)
+Fue desarrollada inicialmente por Sun Microsystems
+Ninguna de las anteriores es cierta.
+La respuesta primera es correcta pero la segunda es más completa que la primera.
+Ninguna de las respuestas anteriores es correcta.
+Fue desarrollada inicialmente por IBM
+Ninguna respuesta es correcta
+Posee un sistema basado en TLB que contiene mapeos directos a memoria principal lo que hace que se disminuyan dichas latencias.
+Cuenta con un controlador de memoria (interfaz directa a memoria)  que reduce significativamente la latencia vista desde el procesador.
+No existe ningún dispositivo que permita conectar de forma directa el procesador con una tarjeta de extensión
+ El hardware en Hypertransport está tan optimizado que los tiempos de latencia originados por el acceso a memoria principal es casi igual al acceso a memoria caché.
+Sí, mediante el uso del conector HTX que permite la interconexión directa del procesador con tarjetas de extensión
+La respueta primera y tercera son correctas.
+Ninguna respuesta es correcta.
+Sí, mediante el uso del conector MTX que permite la interconexión directa del procesador con tarjetas de extensión
+Tanto la b como la c son correctas, ya que el conector MTX es una mejora del HTX
+Todas las respuestas son incorrectas
+La tecnología cHT es similar a la HT pero posee su propio módulo de memoria caché
+La tecnología cHT es usada por los procesadores Opteron de AMD para comunicar distintos módulos de memoria caché
+La tecnología cHT es usada por los procesadores Opteron de AMD para intercomunicar cada uno de los distintos niveles de memoria caché
+La tecnología cHT es usada por los procesadores Opteron de AMD para comunicarse entre ellos y tiene soporte para la coherencia de memoria caché
+Ninguna de las respuestas es correcta
+Una técnica de implementación por la cual se ejecuta de manera inversa múltiples instrucciones
+Una técnica de implementación por la cual se solapa la ejecución de múltiples instrucciones
+Una técnica de implementación por la cual múltiples instrucciones se ejecutan siempre de manera secuencial
+No reduce el tiempo de ejecución de una instrucción individual
+duplica el tiempo de ejecución de una instrucción individual
+elimina el tiempo de ejecución de una instrucción individual
+La velocidad de la CPU
+El número de instrucciones de la máquina
+El repertorio de instrucciones y el tratamiento de las interrupciones
+Un buffer de predicción de saltos
+Una tabla hash
+Un bus de datos
+Planificación estática.
+Planificación con operaciones multiciclo.
+Planificación dinámica.
+Planificación estática y planificación dinámica.
+Planificación estática.
+Planificación dinámica.
+Planificación estática y planificación dinámica.
+A través de este algoritmo las instrucciones pueden ser ejecutadas fuera de orden cuando no existen conflictos y el hardware está disponible. En un marcador se registran las dependencias de datos de cada instrucción. Las instrucciones son emitidas solamente cuando el marcador determina que ya no hay conflictos.
+Utiliza un bus  de datos común en el que los valores calculados son enviados a todas las estaciones de reserva que los necesite, disponiendo de renombrado de registros y permitiendo ejecutar instrucciones fuera de orden.
+Utiliza un bus  de datos común en el que los valores calculados son enviados a todas las estaciones de reserva que los necesite, no disponiendo de renombrado de registros y permitiendo ejecutar instrucciones fuera de orden.
+Ninguna de las anteriores es cierta.
+Es un tipo de chip de memoria ROM no volátil. Una vez programada, una EPROM se puede borrar solamente mediante exposición a una fuera luz ultravioleta.
+Los datos almacenados en la EPROM no se pueden modificar.
+Memoria de sólo lectura en la que los datos almacenados no se pueden modificar.
+Es una memoria digital donde el valor de cada bit depende del estado de un fusible (o antifusible), que puede ser quemado una sola vez.
+Ninguna de las anteriores es cierta.
+Una vez programada, una EPROM se puede borrar solamente mediante exposición a una fuerte luz ultravioleta.
+Permite que múltiples posiciones de memoria sean escritas o borradas en una misma operación de programación mediante impulsos eléctricos
+Ninguna de las anteriores es cierta.
+ROM programable y borrable eléctricamente.
+Es un tipo de chip de memoria ROM no volátil que puede ser borrada eléctricamente.
+Es una memoria digital donde el valor de cada bit depende del estado de un fusible (o antifusible), que puede ser quemado una sola vez.
+ROM programable y borrable eléctricamente.
+Ninguna de las anteriores es cierta.
+Mediante resitros, FLASH, ROM y RAM.
+Mediante registros, SAM, RAM y CAM.
+Se trata de una memoria de acceso aleatorio de estado sólido tipo DRAM en la que se puede tanto leer como escribir información. 
+Memoria de contenido direccionable empleada en determinadas aplicaciones que requieren velocidades de búsqueda muy elevadas.
+Memoria de acceso secuencial la cual sólo puede ser evaluada sucesivamente (de un modo similar a una casete). 
+Ninguna de las anteriores es cierta.
+Tiempo de acierto + Frecuencia de fallos * penalización de fallo
+Tiempo de acierto - Frecuencia de fallos + penalización de fallo
+Tiempo de acierto / (Frecuencia de fallos + penalización de fallo
+Páginas activas referenciadas durante un periodo de tiempo fijado de forma local a cada proceso.
+Tabla de las traducciones de direcciones virtuales a reales usadas recientemente.
+Segmentos de memoria a los que pueden acceder múltiples procesadores, pudiendo definirse restricciones de acceso.
+Ninguna de las anteriores es cierta.
+Intentar que la cantidad de memoria sea infinita y los bloques sean del mayor tamaño posible.
+Optimizar el uso de memoria de pequeño trabajo para aumentar la velocidad de proceso
+Elegir parámetros que conjuntamente funcionen bien, no inventar nuevas técnicas ni simular una cache en una configuración bien comprendida.
+Verdadero
+Falso
+No es posible encontrarlo
+Por simulación y análisis cuantitativo
+Sólo es posible encontrarlo en algunas máquinas.
+Permite que múltiples posiciones de memoria sean escritas o borradas en una misma operación de programación mediante impulsos eléctricos.
+Búsqueda, Caché, Selección de Thread, Decodificación, Ejecución, Memoria, Bypass, Escritura.
+Búsqueda, Selección de Thread, Decodificación, Ejecución, Memoria, Escritura.
+Búsqueda, Caché, Selección de Thread, Decodificación, Ejecución, Memoria, Escritura 
+Selección de Thread, Búsqueda, Caché, Decodificación, Ejecución, Memoria, Escritura 
+Temporal multithreading (TMT) .
+Multithreading de grano fino (Fine-grained multithreading).
+Multithreading de grano grueso (Coarse-grained multithreading).
+Simultaneous multithreading (SMT).
+2
+4
+8
+Fine-grained multithreading.
+Simultaneous Multithreading  
+Temporal Multithreading.
+Barrel processing 
+Multithreading de grano fino (fine-grained) 
+Time-sliced multithreading 
+Barrel processing 
+Todos los términos anteriores son equivalentes 
+Block Multithreading 
+Cooperative Multithreading 
+Coarse-grained Multithreading 
+Todos los términos anteriores son equivalentes. 
+Problemas de desperdicio horizontal (horizontal waste).
+Problemas de desperdicio vertical (vertical waste).
+La capacidad limitada de un único thread para aprovechar el paralelismo a nivel de instrucción.
+Todas las anteriores son correctas.
+Fine-grained temporal multithreading.
+Coarse-grained temporal multithreading.
+Simultaneous temporal multithreading.
+Las dos primeras son correctas.
+Todas son falsas.
+Equipos de sobremesa
+Perminte ejecutar, en el mismo ciclo, instrucciones de más de un hilo en cualquier etapa del pipeline.
+Permite ejecutar instrucciones de más de un hilo en distintas etapas del pipeline, sin ser en el mismo ciclo.
+Permite crear procesos múltiples.
+Todas son falsas.
+Es la capacidad hardware de ejecutar múltiples threads de forma eficiente.
+Es la capacidad software de ejecutar múltiples threads de forma eficiente.
+Las dos anteriores son correctas.
+Todas son falsas.
+Aumenta el desperdicio horizontal.
+Aumenta el desperdicio vertical.
+No mejora el rendimiento si alguno de los recursos compartidos suponen un cuello de botella.
+El uso de SMT en más de 8 hilos por núcleo supone un impedimento a la hora de fabricar CPU´s debido a la ley de Moore.
+Permite incrementar la utilización de un núcleo del procesador aprovechando el paralelismo a nivel de instrucción (ILP).
+Permite incrementar la utilización de un núcleo del procesador aprovechando el paralelismo a nivel de thread (TLP).
+Permite incrementar el uso de varios núcleos aprovechando el paralelismo a nivel de proceso.
+Todas son verdaderas.
+Acertará todas las veces.
+Se equivocará siempre.
+En el mejor de los casos sólo puede acertar la primera iteración.
+En el peor de los casos sólo se equivoca la primera iteración.
+Permiten hacer un acceso a memoria más rápido
+Almacenan las direcciones de memoria que se acceden para comprobar los posibles riesgos
+Se utilizan de puente entre la memoria y los registros
+Ninguna de las respuestas anteriores es correcta
+Son independientes del repertorio de instrucciones.
+No varían entre programas en el mismo computador.
+Pueden variar inversamente al rendimiento.
+Todas las anteriores son ciertas.
+Operaciones que proporciona.
+Número de operandos en una instrucción típica.
+Instrucciones por ciclo de reloj esperadas.
+Posición del operando.
+Tipo y tamaño de los operandos.
+Registro – Registro.
+Registro – Memoria.
+Memoria – Memoria.
+Todas lo son.
+Numero de operaciones en punto flotante / (Tiempo de Ejecución . 106)
+Numero de operaciones en punto flotante / (Tiempo de Ejecución . 109)
+Numero de operaciones en punto flotante . Tiempo de Ejecución . 106
+Numero de operaciones en punto flotante . Tiempo de Ejecución . 109
+Little Endian.
+Medium Endian.
+Big Endian.
+Ninguna de las anteriores.
+a, b, c, d son ciertas.
+a, b, c, e son ciertas.
+b, c, d, e son ciertas.
+a, d, e son ciertas.
+Inmediato.
+Directo o absoluto.
+Indirecto.
+Desplazamiento.
+Ninguna de las anteriores.
+Inmediato.
+Directo o absoluto.
+Indirecto.
+Desplazamiento.
+Ninguna de las anteriores.
+Supercomputadores.
+Grandes Computadores (Mainframes).
+Minicomputadores.
+Microprocesadores.
+Supercomputadores.
+Grandes Computadores (Mainframes).
+Minicomputadores.
+Microprocesadores.
+Incrementar la productividad.
+Disminuir el tiempo de respuesta.
+Las dos anteriores son ciertas.
+Ninguna es cierta.
+Incrementar la productividad.
+Registro de salto, código de condición y registro de condición.
+Disminuir el tiempo de respuesta.
+Las dos anteriores son ciertas.
+WAR
+WAW
+Comparación y salto, predicción de salto y código de condición.
+Ninguna es cierta.
+Comparación y salto, código de condición, registro de condición.
+Ninguna de las anteriores.
+Bajo Coste de los Errores.
+Fácil Diseño.
+Rendimiento.
+Actualización más Simple.
+Ninguno de las respuestas anteriores
+Para  cada instrucción del paquete indica si se ejecutará en paralelo con la que está a la derecha.
+Para cada instrucción del paquete indica si la unidad funcional que la procesará está libre.
+Para cada instrucción del paquete indica si existe un riesgo estructural con alguna de las otras instrucciones del paquete.
+Arquitectura de von Neumann.
+Para cada instrucción del paquete indica si los operandos de la instrucción están disponibles.
+Arquitectura Harvard.
+Ninguna de las anteriores.
+Arquitectura ISA.
+Ninguna de las anteriores.
+Amplio repertorio de instrucciones con formato complejo y flexible.
+Arquitectura de von Neumann.
+Amplio repertorio de instrucciones con formato sencillo.
+Arquitectura Harvard.
+Repertorio reducido de instrucciones con formato sencillo.
+Arquitectura ISA.
+Repertorio reducido de instrucciones con formato complejo y flexible.
+Ninguna de las anteriores.
+Tipo J (jump).
+Tipo A (arithmetic).
+Tipo L (logic).
+Tipo R (register).
+Ninguna de las anteriores.
+Tipo I (Inmediate).
+Tipo J (jump).
+Tipo R (register).
+Tipo A (arithmetic).
+Tipo L (logic).
+Instrucciones de propósito general
+Instrucciones de la unidad en punto flotante (FPU).
+Instrucciones MMX.
+Instrucciones de la unidad aritmético-lógica (ALU). 
+Instrucciones del sistema.
+Instrucciones para operaciones de 64 bits.
+D mod n = 0.
+D / n = 0.
+D mod n = 1.
+D / n = i (i = 1 ó múltiplo de n).
+Ninguna de las anteriores.
+El repertorio de instrucciones 3DNOW fue diseñado por Intel.
+Usa los mismos registros y formatos de instrucciones básicos que MMX.
+Tiene los mismos tipos de datos que MMX.
+Todas las anteriores son ciertas.
+Ninguna de las anteriores es cierta.
+RISC.
+CISC.
+VLIW.
+Ninguna de las anteriores.
+Es una extensión de la familia Intel.
+Son instrucciones del tipo SIMD.
+Son instrucciones diseñadas para favorecer el procesamiento de aplicaciones multimedia.
+Todas las anteriores son ciertas.
+Ninguna de las anteriores es cierta.
+Tiene un repertorio de instrucciones basado en VLIW.
+Emplean un tipo de búsqueda anticipada de datos.
+Resuelve algunas desventajas que presenta VLIW.
+Todas las anteriores son ciertas.
+Ninguna de las anteriores es cierta.
+UMA (Uniform Memory Access).
+NUMA (Non Uniform Memory Access).
+COMA (Cache Only Memory Access).
+Ninguna de las anteriores.
+Cada proceso permite el uso de partes de tamaño variable.\n
+Todos los procesos tienen que ser pequeños.\n
+Todas las respuestas anteriores son ciertas.
+Cada proceso se divide en páginas de tamaño constante y relativamente pequeñas.
+Cada proceso permite el uso de partes de tamaño variable.
+Todos los procesos tienen que ser pequeños.
+Todas las respuestas anteriores son ciertas.\n
+FIFO\n
+LRU
+Estrategia del Reloj
+Todas son ciertas
+ La estrategia consiste en llevar a disco la página que ha permanecido por más tiempo sin ser accesada.\n
+Se elige como la página a reemplazar la primera que fue cargada en memoria.\n
+Cada proceso se divide en páginas de tamaño constante y relativamente pequeñas
+La idea es mantener para cada proceso un mínimo de páginas que garantice que pueda correr razonablemente, es decir con una tasa de page-faults baja.\n
+Ninguna de las anteriores
+Que el tiempo de latencia sea el máximo posible.
+Que la página que se lleve al disco cause un fallo de página lo más tarde posible
+Que se use el mínimo de memoria posible.
+Todas las respuestas anteriores son falsas.
+Una unidad funcional especifica para ello.\n
+El núcleo del sistema operativo a través del scheluder de páginas.
+El procesador junto con el hardware necesario para la planificación del reemplazo.
+Todas las respuestas anteriores son falsas.\n
+El tamaño del disco duro
+El tamaño de la memoria principal\n
+El tamaño de la direccion del procesador
+El tamaño del bus de datos
+Cuanto menor sea el tamaño de página menor será la fragmentación interna
+Cuanto menor sea el tamaño de página mayor será la fragmentación interna.
+Cuanto mayor sea el tamaño de pagina menor será la fragmentación interna.\n
+Todas las respuestas anteriores son falsas.\n
+Los procesos disponen de más memoria de la instalada en el ordenador para ejecutarse.\n
+Detención de la segmentación
+El espacio de direcciones virtuales es único para cada proceso.\n
+Anticipación
+La respuesta 1 y 2 son ciertas. 
+Ninguna de las respuestas anteriores son ciertas.
+Reordenación de código
+Todas las respuestas anteriores son verdaderas
+Viene de Tabla Local de Bloques, y es una memoría caché en la que se registran los bloques de memoria ocupados por un proceso.\n
+Viene de Tabla Lineal de Bloques, y es una estructura lineal empleada para la implementación de una política FIFO de reemplazo de bloques.
+Las respuestas anteriores son todas incorrectas.\n
+Necesita redundancia de muchos recursos: registros, circuitos aritméticos..
+Un número de segmento en memoria principal.
+El procesado de una instrucción se divide en etapas
+Una dirección base o de comienzo del segmento en memoria principal
+Una dirección relativa de memoria principal.\n
+Basta que haya terminado la primera etapa para poder empezar a procesar una nueva instrucción
+Un número de marco de página de memoria principal.
+Todas las respuestas anteriores son verdaderas
+Cuando al sumar el desplazamiento al marco de página nos salimos de los límites del segmento.\n
+ Cuando al sumar el desplazamiento al número de segmento nos salimos de los límites del segmento.\n
+Cuando al sumar el desplazamiento a la dirección base del segmento, nos salimos de los límites del segmento
+El tiempo de ejecución de las instrucciones se reduce a la mitad
+Cuando al sumar el desplazamiento a la dirección base del marco de página, nos salimos de los límites del mismo
+La velocidad se multiplicaría por el número de etapas en que esta segmentado
+La productividad se multiplica por 10
+Todas las respuestas anteriores son verdaderas
+Son 5, IF - ID - EX – MEM – WB
+Son 5, IF – ID – EX – TB – WB
+Son 4, IF – ID – MEM – EX
+Son 4, IF – ID – EX – WB
+Se detiene la máquina hasta que se resuelva el conflicto que pueda surgir
+Durante la etapa EX se hace como máximo una sola función de las tres
+Se utiliza una unidad funcional independiente para saber que tipo de función hay que ejecutar de las tres
+Ninguna de las anteriores es cierta
+Las instrucciones pasan a través de una etapa de emisión en orden, y una instrucción detenida en la etapa ID provoca una detención de todas las instrucciones que la siguen
+Las instrucciones pasan a través de una etapa de emisión fuera de orden, y una instrucción detenida en la etapa ID puede ser desviada a la siguiente etapa a través de mecanismos hardware adicionales.
+Las instrucciones pasan a través de una etapa de emisión fuera de orden y se ejecutan correctamente gracias a la planificación dinámica que se efectúa
+Ninguna de las respuestas anteriores es cierta
+Por medio de librerias
+Depende del lenguaje de programación
+Es invisble al programador, no necesita implementarlo
+La 1 y la 2 son Verdaderas
+Porque este tipo de riesgo sólo se presenta en segmentaciones que escriben en más de una etapa, y DLX no lo permite ya que solamente permite la escritura en la etapa WB
+Porque este tipo de riesgo sólo se da en procesadores superescalares
+Viene de Translation Lookaside Buffer, y es una memoria caché de pequeño tamaño empleada en la traducción de direcciones.
+Porque DLX tiene unidades funcionales dedicadas precisamente a la detección de los riesgos por dependencia de datos que imposibilita la aparición de este tipo de riesgos\n
+Ninguna de las anteriores es cierta.\n
+Estructural
+De Control\n
+RAW
+WAW
+Estructual
+RAW
+De Control
+WAR
+WAW
+Tecnología propia de Intel en la cual se ha implementado una mejora en la comunicación entre las CPU/s y los hilos de ejecución para un aumento de las prestaciones de la tecnología multi-hilo.
+Tecnología propia de AMD en la cual se ha implementado una mejora en la comunicación entre las CPU/s y los hilos de ejecución para un aumento de las prestaciones de la tecnología multi-hilo.
+Tecnología propia de Intel en la cual cada núcleo de procesador que está presente físicamente el sistema operativo se dirige a dos procesadores virtuales, y comparte la carga de trabajo entre ellos cuando sea posible.
+Estrategia multi-hilo que elimina las interferencias entre los hilos debido al hardware compartido.
+El diseño multi-hilo reduce el tiempo de inactividad de la/s CPU/s, se obtiene una ejecución más rápida en caso de que existan gran cantidad de fallos de caché. Por el contrario, complica las aplicaciones desde el punto de vista del software y produce interferencias entre los hilos debido al hardware compartido.
+El diseño multi-hilo aumenta el tiempo de inactividad de la/s CPU/s, se obtiene una ejecución más lenta en caso de que existan gran cantidad de fallos de caché. Por el contrario, complica el diseño del hardware.
+El diseño multi-hilo reduce el tiempo de inactividad de la/s CPU/s. Por el contrario, complica el diseño del hardware, produce interferencia entre los hilos debido al hardware compartido.
+El diseño multi-hilo reduce el tiempo de inactividad de la/s CPU/s, se obtiene una ejecución más rápida en caso de que existan gran cantidad de fallos de caché y reduce las interferencias entre los hilos debido al hardware compartido. Por el contrario, complica las aplicaciones desde el punto de vista del software.
+Selection: Elección mejorada del hilo a ejecutar. Para ello, se utiliza una predicción para elección de un hilo que esté disponible y preparado para la ejecución reduciendo al máximo la cantidad de fallos en la caché.\nBypass: Mejora del proceso entre los accesos de memoria y la vuelta atrás para la ejecución de otro hilo.\n
+Cache: Utilización de un cache con los hilos pendientes, que mejora los tiempos de carga de las diferentes variables necesarias.\nBypass: Mejora del proceso entre los accesos de memoria y la vuelta atrás para la ejecución de otro hilo.\n
+Cache: Utilización de un cache con los hilos pendientes, que mejora los tiempos de carga de las diferentes variables necesarias.\n Selection: Mejora del proceso entre los accesos de memoria y la vuelta atrás para la ejecución de otro hilo. Para ello, se utiliza una predicción para elección de un hilo que esté disponible y preparado para la ejecución reduciendo al máximo la cantidad de fallos en la caché.\n
+Selection: Mejora del proceso entre los accesos de memoria y la vuelta atrás para la ejecución de otro hilo. Para ello, se utiliza una predicción para elección de un hilo que esté disponible y preparado para la ejecución reduciendo al máximo la cantidad de fallos en la caché.\nBypass: Fase que permite simplificar el proceso saltando algunas fases si las condiciones son apropiadas.\n
+La tecnología CMP presentan mejoras en el rendimiento consiguiendo ejecuciones más rápidas que la tecnología SMT siempre que se utilicen cuatro o más hilos de ejecución.
+La tecnología SMT presenta mejoras en el rendimiento consiguiendo mejor aprovechamiento de la energía con un consumo inferior y temperaturas menores especialmente a partir de cuatro hilos de ejecución simultáneos. Sin embargo, esta ventaja es mucho menos significativa con dos hilos de ejecución.
+La tecnología CMP presenta mejoras en el rendimiento consiguiendo mejor aprovechamiento de la energía con un consumo inferior y temperaturas menores especialmente a partir de cuatro hilos de ejecución simultáneos. Además, a partir de los cuatro hilos de ejecución, también presenta mejoras en el rendimiento consiguiendo menos ciclos por instrucción que SMT.
+La tecnología CMP es computacionalmente más lenta que la SMT. Sin embargo,  presenta mejores energéticas consiguiendo menores consumos y menores temperaturas (con el correspondiente ahorro en refrigeración)  especialmente cuando existen cuatros hilos de ejecución simultáneos.
+La tecnología CMP presenta dos niveles de caché por cada procesador y un tercer nivel compartido, sólo admite un hilo de ejecución por cada procesador. Mientras, SMT presenta dos niveles de caché y admite múltiples hilos de ejecución por procesador.
+La tecnología CMP dos niveles de cache por procesador, sólo admite un hilo de ejecución por cada procesador. Mientras, SMT presenta dos niveles de caché por procesador y admite múltiples hilos de ejecución por procesador.
+La tecnología CMP presenta un niveles de caché por cada procesador y un segundo nivel compartido, sólo admite un hilo de ejecución por cada procesador. Mientras, SMT presenta dos niveles de caché y admite múltiples hilos de ejecución por procesador.
+La tecnología CMP presenta un niveles de caché por cada procesador y un segundo nivel compartido, sólo admite un hilo de ejecución por cada procesador. Mientras, SMT presenta dos niveles de caché y sólo admite un hilo de ejecución por cada procesador.
+Los procesadores Montecito poseen un nivel 1 de cache para instrucciones y otro para datos, un segundo nivel unificado y un tercer nivel también unificado.
+Los procesadores Montecito poseen 3 niveles de caché.
+Los procesadores Montecito poseen 2 niveles de caché.
+Los procesadores poseen dos niveles de cache para instrucciones, otros dos niveles de cache para datos y un tercer nivel unificado.
+El Consumo de energía
+El sobrecalentamiento de la máquina
+La compartición de recursos de la máquina y los problemas de saturación que eso conlleva
+Ninguno
+Dos procesadores independientes
+Dos procesadores dependientes
+Dos núcleos con varios procesadores independientes
+Dos núcleos con dos procesadores independientes
+No permite trabajar con 64 bits de forma nativa
+Permite no trabajar con 64 bits de forma nativa
+Permite trabajar con 64 bits de forma no nativa
+No permite trabajar con 64 bits de forma no nativa
+Equipos portátiles
+Servidores
+Microarquitectura Netburst
+Microarquitectura Core
+Arquitectura Pentium M
+Ninguna de las respuestas
+Portátiles
+Equipos de sobremesa
+Servidores
+Ninguna
+Portátiles
+Equipos de sobremesa
+Servidores
+Ninguna
+Portátiles
+Equipos de sobremesa
+Servidores
+Ninguna
+Core 2 Duo
+Core i7
+Core 2 Quad
+Ninguno de los anteriores
+De 4 núcleos no monolíticos
+De 4 núcleos monolíticos
+De 4 procesadores
+Ninguno de los anteriores.
+A veces
+Nunca
+Siempre
+Sólo cuando son independientes
+Siempre
+Dependiendo del código
+Nunca
+Dependiendo del tipo de procesador multinucleo
+PPE
+PSE
+ESP
+SMT
+16 kB
+8 kB
+32 kB
+64 kB
+64 kB
+128 kB
+256 kB
+512 kB
+Si
+No
+Dependiendo del tamaño del salto
+Si, pero sólo el núcleo principal
+Caché bloqueante 
+Caché no bloqueante 
+Ninguna
+Caché bloqueante y no bloqueante
+Mapeado directo 
+Mapeado completamente asociativo 
+Mapeado asociativo por conjuntos
+Ninguno
+Inclusivas
+Exclusivas
+Inclusivas y exclusivas
+El índice es un identificador, unívoco, de la linea de caché. El contenido guarda el dato que estamos almacenando. 
+La marca es la referencia a memoria. El contenido guarda el dato que estamos almacenando.
+El índice es un identificador, uńivoco, de la línea de caché. La marca es la referencia a memoria. El contenido guarda el dato que estamos almacenando.
+El índice es un identificador por conjuntos de datos. La marca es la referencia a memoria. El contenido guarda el dato que estamos almacenando.
+Protocolo de Snooping 
+Protocolo de Snarfing
+MSI
+MESI
+Cuando la caché es modificada se marca el bit dirty, que nos indicará que ese dato debe ser modificado en memoria principal cuando esa línea de caché sea reemplazada.
+Cuando una palabra de caché es modificada, automáticamente se modifica en memoria principal para hacer efectivo el cambio.
+Cuando una palabra de caché es modificada, se almacena en un índice que permite el acceso directo a todas sus posiciones para comprobar si un dato fue modificado, antes de que la línea de caché sea reemplazada.
+Cuando una palabra de caché es modificada, se almacena en un buffer, y cada “n” ciclos de reloj se comprueban los datos modificados, para luego actualizarlos.
+Para asegurar la coherencia de la caché, sólo se puede disponer de un nivel de caché, compartido entre datos e instrucciones.
+Para asegurar la coherencia de la caché, sólo se puede disponer de un nivel de caché, aunque se puede separar entre caché de datos y de instrucciones.
+Deben haber dos niveles, el L1 es compartido por datos e instrucciones, pero el L2 se divide en L2 para datos y L2 para instrucciones.
+En la arquitectura de Von Neumann se dispone un único nivel de caché (L1) y en la de Harvard se disponen de hasta tres niveles (L1, L2 y L3).
+En la arquitectura de Von Neumann la caché se encuentra dividida en caché de datos y caché de instrucciones, pero en la Harvard, se encuentran juntos los datos y las instrucciones.
+En la arquitectura de Von Neumann en la caché se encuentran juntos los datos y las instrucciones, pero en la Harvard, se encuentra dividida en caché de datos y caché de instrucciones.
+La arquitectura de Von Neumann y la de Harvard son la misma, y consiste en que en la caché se encuentran juntos los datos y las instrucciones.
+Los datos almacenados en caché pueden perder coherencia debido a problemas de overflow, ya que normalmente el tamaño de la caché es menor que el de la memoria.
+Esta integridad de los datos puede verse amenazada si dos procesos tratan de escribir en la misma línea de caché.
+Esta integridad de los datos puede perderse porque hay palabras que no se encuentran en caché y es necesario recurrir a la memoria principal para obtenerlas.
+Hay veces que la TLB no se encuentra actualizada e indica que una palabra se encuentra en caché, pero ya fue reemplazada y se encuentra en memoria principal.
+El bloque se modifica directamente en la memoria de nivel superior 
+No necesariamente debe ser un sólo nivel de memoria, es más, lo normal es que incorpore dos o más niveles de memoria.
+Cachés partidas, disminución de tasa de fallos, tiempos de acierto y penalización de fallos
+Renombrado, reordenamiento de instrucciones.
+Situaciones  que se producen cuando el estado del procesador no es exactamente el mismo que si se hubiera ejecutado un programa en orden estricto.
+La instrucción ADD.D consulta el registro F0 el cual indica que su valor  estará en la posición 5 del ROB e igualando Qj = 5.
+El reorder buffer resuelve el problema de las excepciones dejando el estado del computador preciso.
+Una técnica de generación de código en la planificación global.\r\n
+Se deben conocer las probabilidades de cada uno de los caminos en los saltos condicionales con objeto de cambiar la posición de las instrucciones en la planificación global\r\n
+La limitación de velocidad del propio bus al conectar numerosos dispositivos de E/S debido al gran ancho de banda que requieren dichos dispositivos
