@@ -1,0 +1,4 @@
+The codes in RISC programs consist of fewer instructions than their CISC equivalents
+The RISC philosophy is founded on the priciple that in order to improve the computer´s performance it is necessary to minimize the number of clock cycles needed to execute instructions
+RISC Architecture indicates that increasing the addressing modes allows data to be more easily accessed, and as such, makes execution times faster.
+RISC defends data dependences, in the pipeline processors these must be resolved by the hardware due to it being faster

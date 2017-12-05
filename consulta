@@ -1,0 +1,8 @@
+select response
+from question_responses
+where (created_at between '01-01-2009' and '01-01-2010') and question_id in(
+select questions.id
+from questions, courses
+where (courses.id = questions.course_id) and (courses.name in ('Arquitectura', 'Arquitecturas Avanzadas', 'Arquitectura Computadores Grado')));
+
+\copy (select response from question_responses where (created_at between '01-01-2009' and '01-01-2010') and question_id in(select questions.id from questions, courses where (courses.id = questions.course_id) and (courses.name in ('Arquitectura', 'Arquitecturas Avanzadas', 'Arquitectura Computadores Grado')))) to 'respuestas/2009.txt';

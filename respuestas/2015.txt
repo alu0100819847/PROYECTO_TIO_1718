@@ -1,0 +1,101 @@
+6.3 segundos
+7.7 segundos
+8.3 segundos
+9.3 segundos
+3.4 segundos
+8.00
+2.10
+1.56
+7.24
+Al número de puertos de salida
+Al número de puertos de entrada/salida
+Mecanismos basados en operaciones aritméticas sencillas
+Source-Based routing
+Lookup Table
+Ninguna de las anteriores es correcta.
+Su Topología
+El algoritmo de routing que emplee y la estrategia de conmutación
+Su topología y los mecanismos de control
+Su topología, el algoritmo de routing que emplee, la estrategia de conmutación y los mecanismos de control
+Su topología, El algoritmo de routing que emplee, la estrategia de conmutación y los mecanismos de control y la variedad de subredes.
+Todas las anteriores son ciertas
+La uno y la dos son correctas
+Ninguna es cierta
+Hot Potato routing trata los grandes paquetes dividiéndolos en pequeñas piezas llamadas FLITS (FLow digITS). El primer Flit (header Flit) mantiene información acerca de la ruta del paquete. El Flit final (tail Flit) cierra la conexión entre los nodos.
+El switch no almacena el paquete, encamina rápidamente el paquete. Si otro paquete es destinado al mismo canal, cambia de canal
+Es una forma de ruteo multipath donde la elección de las rutas se realiza dinámicamente por el switch en respuesta la tráfico encontrado en la ruta. Si una de las salidas está bloqueada, o en fallo, el switch puede escoger enviar el paquete sobre otro canal alternativo. \r\n\r\n
+Ninguna de las anteriores
+Permitir que ocurran múltiples transferencias de datos en paralelo
+Permitir varias conexiones entre procesadores
+Disminuir el tiempo requerido por los procesos
+La primera y la segunda son correctas
+Al número de puertos de entrada
+A la velocidad de transmisión
+-Cuando ocurre un bloqueo permanente de un conjunto de procesos en un sistema concurrente que compite por recursos.
+-En este tipo de redes de procesadores no se producen dead lock
+-Solo se produce un dead lock cuando hay un fallo de caché y este intenta ir a una posición de memoria que está actualmente siendo ocupada por otro proceso
+-Ocurre un deadlock cuando un paquete espera por un evento que no puede ocurrir
+-Conjunto de rutas sin bloqueo, alta latencia, tolerancia a fallos 
+-Conjunto de rutas con bloqueo, baja latencia, sin tolerancia a fallos
+-Conjunto de rutas sin bloqueo, baja latencia, tolerancia a fallos
+-Conjunto de rutas con bloqueo, alta latencia, sin tolerancia a fallos
+-Se van realizando operaciones aritméticas en los conmutadores, dependiendo del origen
+-La ruta a seguir se incluye en una cabecera, sin realizar operaciones aritméticas
+-Es un algoritmo basado en el origen, cuyas operaciones aritméticas sólo se realizan en ciertos puntos dependiendo del origen
+-La ruta se recalcula en cada conmutador, basándose siempre en el origen
+-Articular las dependencias que puedan surgir, mostrando una vez articulado los ciclos existentes en el grafo funcional
+-Numerar los recursos del canal,de forma que cada ruta siga una secuencia monótona creciente o decreciente de manera que no aparezcan ciclos
+-En la actualidad dead-lock no tiene ninguna solución viable
+
+-Ninguna es correcta
+-Hot potato routing
+-Adaptative routing
+-Wormhole switching
+-Cold potato routing
+-Para eliminar situaciones de deadlock
+-Para resolver el, problema del deadlock en mensajes tipo wormhole
+-Las dos respuestas anteriores son correctas
+-Para resolver el problema de comunicación libre de deadlock en multicast/broadcast
+-Todas las respuestas son correctas
+-La red butterfly es una red bloquenate
+-La red crossbar es una red no bloqueante
+- las dos primeras respuestas son ciertas
+- Ninguna respuesta es correcta
+-Sí, ambas técnicas coinciden
+-no, la wormhole es segmentada mientras que la cut-through no lo es
+-No, la wormhole no es segmentada mientras que la cut-through lo es
+-Sí, son la misma pero si la cabecera del paquete no puede continuar avanzando, en la wormhole el paquete queda bloqueado mientras que en la cut-through se sigue recibiendo el resto de los flits del paquete
+-No, ambas producen los mismos confliictos en la red
+-No, es la cut-through la que produce menos conflictos porque no se bloquea
+-Sí, porque al bloquearse, porque la cabecera no continua, deja más enlaces libres
+-No, porque ambas se bloquean
+- a) indica throughput y b) indica latencia
+- a) indica latencia y b) indica throughput
+-Las gráficas a) y b) no representan estos parámetros
+- Sólo a) representa a uno de los dos parámetros
+- Ambas presentan los mismos inconvenientes
+-a)
+-b)
+-c)
+-d)
+-20.5%
+-50.4%
+-10.5%
+-15.3%
+-33.6%
+- A través del sistema operativo distribuido (caso de PVM)
+- A través de librerías (tipo MPI)
+- A través de recursos hardware como DMA y buffers de entrada y salida
+- A través de procesadores dedicados
+- Las dos respuestas anteriores son ciertas
+- Que la pareja ll-sc produce 2 transacciones mientras que la alternativa ticket lock solo presenta una
+- Es la alternativa ticket lock la que presenta más transacciones que la ll-sc
+- Ninguna de las anteriores es correcta
+-Ninguna,  ambos retrasan el tiempo de petición del recurso para que no lo solicten al mismo tiempo
+-En el caso del Ticket lock cada proceso espera un tiempo proporcional al tiempo que estiman que tardará en llegarle el turno, asi no habrá tiempos muertos de espera cuando se libere el recurso
+- Ninguna, porque todos los procesos esperan por la misma localización 
+- Ninguna de las respuestas anteriores es cierta
+- No es necesario que todos los slots estén en bloques diferentes
+- Porque de esta forma los procesadores no están todos preguntando por el mismo bloque 
+- Porque de esta forma se tienen menos fallos en la cache
+- No, aunque si ocurre que estos slots no se asocian estáticamente a los procesadores 

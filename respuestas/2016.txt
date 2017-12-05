@@ -1,0 +1,5 @@
+-CMOS tiene menos consumo de potencia que TTL
+-CMOS tienen una mayor variabilidad en los niveles de tensión
+-Los tamaños en CMOS son más reducidos
+-La disipación de potencia en CMOS depende de la frecuencia
+-Todas las respuestas anteriores son ciertas

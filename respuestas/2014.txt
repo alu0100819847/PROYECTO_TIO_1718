@@ -1,0 +1,190 @@
+Deben utilizarse protocolos de invalidación o protocolos de actualización
+Si, porque sin ella el juego de instrucciones no es completo
+No, porque no es necesaria
+No, porque test&set no es una instrucción
+Ninguna de las anteriores es correcta
+MESSI
+MESI
+Dragon
+MSI
+Que al reutilizarse el barrier se puede producir un deadlock si existen diferentes procesos con diferentes velocidades.
+Que consume mucho procesamiento si  existen diferentes procesos con diferentes velocidades.
+Que los contadores no son reutilizables ya que se puede producir un deadlock
+Ninguna de las anteriores es correcta.
+La E de exclusive para bloques no compartidos
+La E de exclusive-dirty usado para en programas monohilo reducir el consumo del bus
+La E de exclusive-clean usado para en programas monohilo reducir el consumo del bus
+Ninguna de las anteriores
+Modificado
+Exclusivo
+Inválido
+Compartido
+Modificado
+Exclusivo
+Inválido
+Compartido
+Modificado
+Exclusivo
+Inválido
+Compartido
+Como la información ya no se puede utilizar las copias se invalidan
+La información de las copias se actualiza con el nuevo valor
+Todas las respuestas son correctas
+Sincronización por barrera
+Sincronización de una vía
+Sincronización de cerrojos
+Sincronización de cerrojos basados en colas
+Load Linked
+Test&set
+Store-conditional
+Ninguna de las anteriores
+Load Linked
+Store-conditional
+Test&set
+Ninguna respuesta es correcta. 
+MESSI
+MESI
+Dragon
+MSI
+El proceso por el cual la caché monitorea las direcciones y las almacena para posteriores escrituras. Cuando tiene lugar una nueva escritura a dicha ubicación, el controlador de caché lo ignora, ya que ya posee su propia copia.
+MT
+SMT
+Hypertrading
+Simultaneous HyperTrading
+1-SMT 2-superescalar 3_MT Grano Grueso
+1-Superescalar 2- MT Grano fino 3-SMT
+1-MT Grano Grueso 2- Superescalar 2-SMT 3-MT Grano fino
+1-superescalr 2-SMT 3 MT Grano fino
+En MT solo se elimina el desperdicio (Unidades funcionales) vertical, mientras que en SMT se elimina el desperdicio vertical y horizontal
+En MT solo se elimina el desperdicio horizontal, mientras que en SMT se elimina el desperdicio vertical y horizontal
+MT no explota el TLP mientras que SMT sí
+Ninguna de las anteriores es correcta
+Si un subproceso recibe una gran cantidad de fallos de caché, otro hilo puede continuar, aprovechando los recursos informáticos utilizados, que por lo tanto puede llevar a la ejecución global más rápido, ya que estos recursos habrían sido inactivo si se ejecuta sólo un subproceso
+Si varios hilos trabajan en el mismo conjunto de datos pueden compartir su caché, lo que lleva a un mejor uso de la caché o la sincronización de sus valores
+El soporte de hardware para multihilo es más visible para el software, por lo que requiere más cambios en los programas de aplicaciones y sistemas operativos
+Si un hilo no puede utilizar todos las unidades funcionales de la CPU (porque las instrucciones dependen del resultado de cada uno), la ejecución de otro subproceso puede evitar dejar estas inactivas
+Los procesos necesitan acceso exclusivo a los recursos.
+Los procesos necesitan mantener ciertos recursos exclusivos mientras esperan por otros.
+Los recursos no se pueden obtener de los procesos que están a la espera.
+Existe una cadena circular de procesos en la cual cada proceso posee uno o más de los recursos que necesita el siguiente proceso en la cadena.
+Todas son circunstancias propicias para el abrazo mortal.
+La operación P se utiliza para solicitar permiso para entrar en la sección crítica, mientras que la operación V registra la conclusión del acceso a dicha sección.
+La operación P activa/desactiva el semáforo y la operación V permite ver el estado actual del mismo
+La definición de semáforo es incorrecta
+Ninguna de las respuestas es correcta
+Sincronizacion multithreading
+Sincronizacion inversa
+Sincronizacion por barrera
+Ninguna de las anteriores es correcta.
+Un proceso que permite a las cachés ganar en consistencia de datos gracias la información que almacenan sobre la dirección de los datos.
+El proceso por el cual los controladores de cachés individuales monitorean las direcciones a posiciones de memoria que circulan por el bus. Cuando tiene lugar una operación de escritura dirigida a una ubicación de la que la caché tiene una copia, el controlador de caché invalida su propia copia.
+Un proceso que tiene lugar cuando se realiza una operación de lectura sobre una posición de memoria que ha sido accedida recientemente
+Espiando el bus, una vez se sepa si se puede cambiar o no, copiarla en nuestra caché.
+Comprobando cada entrada de caché por procesador existente.
+Espiando el bus para saber qué hacen los demás y enviando señales de control especiales a todos los procesadores por medio del bus.
+No se puede saber, todos los valores en las caches son privados al procesador.
+Como la información ya no se puede utilizar las copias se invalidan. 
+La información de las copias se actualiza con el nuevo valor.
+Deben utilizarse protocolos de invalidación o protocolos de actualización.
+Todas las respuestas son correctas.
+Escritura directa.
+Postescritura.
+El protocolo Dragon no existe en coherencia.
+Escritura directa y postescritura.
+El número de accesos al bus y la latencia en cada respuesta
+El número de accesos al bus
+La latencia en la respuesta
+Lo mismo que se optimiza en un protocolo de coherencia por directorio
+Para diferenciarlo en ocasiones del estado M
+Para asegurar un servicio de suministro de bloques entre las cachés sin intervención de la memoria principal
+Para reducir el número de accesos al bus
+Ninguna de las anteriores
+En una operación de escritura en un bloque se actualiza el dato que se está escribiendo
+En una operación de escritura se actualizan todas las copias cuando se reemplaza el bloque
+Un procedimiento de write through
+Ninguna de las anteriores
+Un menor número de transacciones en el bus
+El protocolo MSI es de escritura directa mientras el MESI es de escritura retardada
+Un menor número de accesos a memoria principal
+ambos son equivalentes, son productos de diferentes empresas 
+Es un método sencillo de implementar un protocolo escalable que no tiene mayores inconvenientes
+Tiene un problema de escalabilidad a medida que aumente el número de procesadores la información del directorio puede llegar  a ser mucho mayor que el contenido del bloque
+No puede trabajar en memoria compartida
+Ninguna es cierta
+La distancia es 2*N con bisección 1. Una ruta entre un par de nodos
+La suma de los procesadores y los bloques en las memorias caches
+La suma de los procesadores y los bloques en las memorias 
+El producto del Número total de procesadores por el Número total de bloques en las memorias cache
+El producto entre el número total de procesadores y el número total de bloques en las memorias
+Load Linked
+Store-conditional
+Test&set
+Ninguna respuesta es correcta. 
+3-ary 2-cube
+3-ary 3-D-mesh
+1-ary 2-cube
+2-ary 4-cube (hypercube)
+Cajas comunicadoras
+Enlaces nodo a nodo
+Conmutadores
+Enlaces bidireccionales
+Cualquier fuente puede conectarse con cualquier destino libre sin afectar a las conexiones en curso
+Ofrece la misma funcionalidad que una red de barras cruzadas
+Presenta igual funcionalidad que una red de barras cruzadas, pero la latencia puede ser mayor, debido a que las transferencias pueden atravesar varios conmutadores
+Ninguna de las anteriores
+Redes Reconfigurables, Redes no reconfigurables y Redes bloqueantes
+Redes bloqueantes, Redes no bloqueantes y Redes Reconfigurables
+Redes Reconfigurables, Redes no reconfigurables, Redes no bloqueantes y Redes bloqueantes
+Ninguna de las anteriores
+Una red Multietapa Reconfigurable
+Una red no bloqueante 
+Una red de Hipercubos
+Ninguna de las anteriores
+Toroide
+Lineal
+Cubo
+Grid
+Ninguna es cierta
+Ninguna de las anteriores
+la a y la c son correctas
+Ninguna de las anteriores es cierta
+Ninguna de las anteriores es cierta
+Los extremos se unen, de modo que cada nodo tiene dimensión 2D en el caso bidireccional y se conectan a los nodos que difieren en 1modK (1 módulo K )  en cada dimensión
+Los extremos se unen, de modo que cada nodo tiene una dimensión 2D en el caso unidireccional y se conectan a los nodos que difieren en K-1 en cada dimensión
+Los extremos no están unidos, de modo que cada nodo tiene dimensión 2D en el caso bidireccional y se conectan a los nodos que difieren en 1modK ( 1 módulo K ) en cada dimensión
+Los extremos no están unidos, de modo que cada nodo tiene dimensión 2D en el caso unidireccional y se conectan a los nodos que difieren en 1-K en cada dimensión
+La distancia es 2*N con bisección 2. Dos rutas entre un par de nodos
+Hipercubo
+Benes
+Butterfly
+Árbol
+Para N hojas, el diámetro de la red es de (2^N)-1
+Para N hojas, el diámetro de la red es de 2 log N
+Para N hojas, el diámetro de la red es de 2^N
+Para N hojas, el diámetro de la red es la distancia desde cualquier hoja hasta la raíz del árbol
+Ruteo complejo y longitud de cableado
+La distancia es N/2 con bisección 1. Una ruta entre un par de nodos
+Crecimiento exponencial y complejidad de implantación
+Bisección y longitud de cableado
+No tienen ningún problema característico diferente a otro tipo de redes
+Diámetro Log2 N con rutas Log N. Bisección N/2
+Diámetro Log N con rutas Log2 N. Bisección N/2
+Diámetro Log2 N con rutas Log N. Bisección N
+Diámetro Log N con rutas Log2 N. Bisección N/2
+Son dos redes Butterflies superpuestas, permitiendo enviar mensajes de la mitad superior a la inferior a otra sin conflicto
+Son dos redes Butterflies simétricas, permitiendo enviar mensajes desde izquierda a derecha sin conflicto
+Son dos árboles simétricos, permitiendo enviar mensajes desde izquierda a derecha sin conflicto
+Son dos árboles superpuestos, permitiendo enviar mensajes de la mitad superior a la inferior a otra sin conflicto
+Maximizamos la dimensión
+Minimizamos la dimensión
+Construimos una malla
+La distancia es indiferente a la hora de diseñar una red
+Es una tecnología de conexión punto a punto del chipset norte (northbridge) con el procesador, desarrollado por Intel para competir con HyperTransport
+Esta conexión provee exactamente el doble del ancho de banda teórico de un FSB de Intel de 1600 MHz
+La primera respuesta  y la segunda son correctas
+Todas son falsas
+Incrementar las prestaciones de los supercomputadores mediante la mejora de enrutamientos y aplicación del modelo OSI de red a nivel de procesador
+Incrementar las prestaciones específicas de los procesadores mediante la mejora de los canales de comunicación
+Incrementar las prestaciones globales mediante la eliminación del cuello de botella en la E/S
+Todas son falsas
+La distancia es N/2 con bisección 2. Dos rutas entre un par de nodos
