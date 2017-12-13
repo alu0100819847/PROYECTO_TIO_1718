@@ -29,7 +29,19 @@ Para ello, debemos cumplir los siguientes objetivos:
 * Exportar estos datos a texto plano para poder tratarlos en R ⚠️
 * Aplicar diversas transformaciones a los resultados para obtener un porcentaje de cercanía entre cursos ⚠️
 
- 
+## Conclusiones y resultados 🏁
+
+Tras hacer un estudio en profundidad de los datos y tratar con ellos, en este caso, las respuestas dadas por los alumnos en los años **2009** y **2010** de la asignatura **Arquitectura Avanzada de Computadores** tienes un **índice de similitud del 87% entre las respuestas de ambos años**, por lo que podemos decir que hay un alto porcentaje de similitud entre las respuestas dadas por los alumnos en los dos años para las mismas preguntas.
+
+Además, podemos observar que la **nubes de palabras** de, valga la redundancia, las palabras más repetidas en cada año son casi las mismas (a mayor tamaño, mayor número de veces que aparece en las respuestas):
+
+![Nube-2009][1] ![Nube-2010][2]
+
+ [1]: https://i.imgur.com/99SmLsK.png
+ [2]: https://i.imgur.com/eZXArwi.png
+
+Se puede observar como en ambas nubes de palabras como **"instrucciones", "anteriores", "ejecución" o "datos"** son muy repetidas en ambos años.
+
 ## Autores 👥
 * [Néstor García Moreno]()
 * [Darwin González Suárez]()
