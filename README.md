@@ -42,6 +42,10 @@ Además, podemos observar que la **nubes de palabras** de, valga la redundancia,
 
 Se puede observar como en ambas nubes de palabras como **"instrucciones", "anteriores", "ejecución" o "datos"** son muy repetidas en ambos años.
 
+La nube de palabras resultante de la unión de los dos corpus se asemeja mucho a las nubes de palabras de los corpus individuales, como se puede ver en la siguiente imagen:
+
+<center><img src="https://i.imgur.com/pe3uuGz.png" alt="nube" height="250" width="250"></center>
+
 ## Autores 👥
 * [Néstor García Moreno]()
 * [Darwin González Suárez]()

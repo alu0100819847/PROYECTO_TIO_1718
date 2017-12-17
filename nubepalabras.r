@@ -1,14 +1,18 @@
 library(tm)
 library(wordcloud)
-txt <- readLines("/Users/nestor/Desktop/PROYECTO_TIO_1718/2009.txt",encoding="UTF-8")
-txt = iconv(txt, to="ASCII//TRANSLIT")
-corpus <- Corpus(VectorSource(txt))
-d<- tm_map(corpus, content_transformer(tolower))
+library(SnowballC)
+library(ggplot2)
+
+ficheros <- file.path("~", "Desktop", "4","TIO","PROYECTO_TIO_1718","corpus")
+ficheros <- iconv(ficheros, to ="utf-8")
+corpus <- Corpus(DirSource(ficheros))
+d<- tm_map(corpus, tolower)
 d<- tm_map(d, stripWhitespace)
 d<- tm_map(d, removePunctuation)
 d<- tm_map(d, removeNumbers)
 d<- tm_map(d, removeWords, stopwords("spanish"))
-sw <- readLines("/Users/nestor/Desktop/PROYECTO_TIO_1718/stopword.es",encoding="UTF-8")
+d <- tm_map(d, stemDocument)
+sw <- readLines("/Users/nestor/Desktop/4/TIO/PROYECTO_TIO_1718/stopword.es",encoding="UTF-8")
 sw = iconv(sw, to="ASCII//TRANSLIT")
 d <- tm_map(d, removeWords, sw)
 tdm <- TermDocumentMatrix(d)
@@ -17,4 +21,7 @@ wf <- sort(rowSums(m),decreasing=TRUE)
 dm <- data.frame(word = names(wf), freq=wf)
 findFreqTerms(tdm, lowfreq=20)
 wordcloud(dm$word, dm$freq,random.order=FALSE, colors=brewer.pal(8,"Dark2"))
+
+
+
 
